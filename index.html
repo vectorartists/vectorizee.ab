@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>vectorizee.ab — Free PNG/JPG → SVG</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>vectorizee.ab — Free PNG/JPG → SVG</h1>
+  <p>Client-side conversion — your image stays in your browser.</p>
+
+  <input id="file" type="file" accept="image/*">
+  <div class="controls">
+    <label>Mode:
+      <select id="mode">
+        <option value="color">Full color</option>
+        <option value="mono">Monochrome</option>
+      </select>
+    </label>
+    <label>Detail:
+      <input id="turdsize" type="range" min="0" max="100" value="20">
+    </label>
+    <button id="convert">Convert</button>
+    <button id="download" disabled>Download SVG</button>
+  </div>
+
+  <div id="preview">No image yet — upload a PNG/JPG.</div>
+
+  <!-- ImageTracer.js (library) -->
+  <script src="https://unpkg.com/imagetracerjs@1.2.3/imagetracer_v1.2.3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
